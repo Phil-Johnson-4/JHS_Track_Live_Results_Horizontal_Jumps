@@ -63,7 +63,7 @@ function handleMeasurementUpdate(event) {
 
 function updateMeasurement(meters) {
     // 1. Update Metric Display
-    measurementDisplay.innerText = meters.toFixed(3) + " m";
+    measurementDisplay.innerText = meters.toFixed(2) + " m";
 
     // 2. Update Imperial Display
     const imperialString = convertToImperial(meters);
@@ -125,3 +125,4 @@ function updateStatus(text, isConnected) {
 document.addEventListener('DOMContentLoaded', () => {
     connectBtn.addEventListener('click', connectDISTO);
 });
+

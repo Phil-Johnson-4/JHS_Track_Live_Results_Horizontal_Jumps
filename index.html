@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>DISTO Web Transfer Prototype</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leica DISTO Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <img src="assets/2024 School Crest.png" alt="Project Logo" class="logo">
-    <h1>DISTO Measurement Viewer</h1>
-  </header>
+    <div class="container">
+        <header>
+            <h1>Leica DISTO Connect</h1>
+            <p class="status" id="statusText">Disconnected</p>
+        </header>
 
-  <main>
-    <button id="connectBtn">Connect to DISTO</button>
-    <div id="measurement">No data yet...</div>
-  </main>
+        <main>
+            <div class="measurement-card">
+                <div class="label">Current Measurement</div>
+                <div class="value" id="measurement">--</div>
+                <div class="unit">meters</div>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 Your Project</p>
-  </footer>
+            <button id="connectBtn" class="btn-primary">
+                <span class="icon">🔗</span> Connect Device
+            </button>
+        </main>
+    </div>
 
-  <!-- Link to your external JS file -->
-  <script src="Track_Live_Results.js"></script>
+    <script src="Track_Live_Results.js"></script>
 </body>
-</html>
 
+</html>

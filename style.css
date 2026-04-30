@@ -14,7 +14,8 @@ body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-primary);
-    height: 100vh;
+    height: 100vh; /* Fallback for older browsers */
+    height: 100dvh; /* Dynamic viewport height to fix mobile browser UI hiding footer */
     overflow: hidden;
     background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
 }
@@ -132,4 +133,31 @@ h1 {
 
 .icon {
     font-size: 1.2em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-left {
+        text-align: center;
+    }
+
+    .status {
+        justify-content: center;
+    }
+
+    .metric {
+        font-size: 30vw;
+    }
+
+    .imperial {
+        font-size: 12vw;
+    }
 }
